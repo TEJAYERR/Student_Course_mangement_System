@@ -9,7 +9,7 @@ const Courses = () => {
     const getCourses = async () => {
 
         try {
-            const response = await fetch("http://localhost:8080/Student-Course-Registration-System/courses");
+            const response = await fetch("https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/courses");
             const data = await response.json();
             // if(!response.ok){
 

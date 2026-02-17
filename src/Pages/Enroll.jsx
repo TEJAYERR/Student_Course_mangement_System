@@ -25,7 +25,7 @@ const Enroll = () => {
         console.log(trimmedStuId, trimmedCourseId)
         let response;
         try{
-            response = await fetch(`http://localhost:8080/Student-Course-Registration-System/enroll?studentId=${trimmedStuId}&courseId=${trimmedCourseId}`,{
+            response = await fetch(`https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/enroll?studentId=${trimmedStuId}&courseId=${trimmedCourseId}`,{
                 method :"POST",
             });
         }
