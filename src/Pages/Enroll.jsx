@@ -7,13 +7,17 @@ const Enroll = () => {
     const [stuId, setStuId] = useState("");
     const [courseId, setCourseId] = useState("");
     const[isError, setIsError] = useState(false);
+    const[enrollMsg, setEnrollMsg] = useState([]);
+    const[isEnrolling, setIsEnrolling] = useState(false);
 
     const handleChangeStudent = (e) =>{
         setStuId(e.target.value)
+        setEnrollMsg([]);
     }
 
     const handleChangeCourse = (e) =>{
         setCourseId(e.target.value)
+        setEnrollMsg([]);
     }
 
     const enrollStudent = async (e) => {
@@ -21,13 +25,19 @@ const Enroll = () => {
 
         const trimmedStuId = stuId.trim();
         const trimmedCourseId = courseId.trim();
-
-        console.log(trimmedStuId, trimmedCourseId)
-        let response;
+        
         try{
-            response = await fetch(`https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/enroll?studentId=${trimmedStuId}&courseId=${trimmedCourseId}`,{
+
+            setIsEnrolling(true);
+            setEnrollMsg([]);
+
+            const response = await fetch(`https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/enroll?studentId=${trimmedStuId}&courseId=${trimmedCourseId}`,{
                 method :"POST",
             });
+
+            const data = await response.json();
+            setIsEnrolling(false);
+            setEnrollMsg(data)
         }
         catch(e){
             console.log(e);
@@ -35,24 +45,9 @@ const Enroll = () => {
 
     };
 
-    const enrolled = () => {
-
-        if(isEnrolled){
-            return(
-                <div>Student enrolled Successfully!!</div>
-            )
-        }
-        else{
-            return(
-                <div>Not Enrolled Successfully</div>
-            )
-        }
-    }
-
     return(
 
         <div>
-            
             <Courses />
             <form onSubmit={enrollStudent}>
                 <input 
@@ -73,6 +68,8 @@ const Enroll = () => {
                 <br />
                 <button type="submit" className="mt-2 border border-black p-1 w-50 cursor-pointer">Submit</button>
             </form>
+            {(isEnrolling) && <p>Enrolling wait......</p> }
+            <p className="">{enrollMsg.length > 0 && enrollMsg[0].result}</p>
         </div>
     )
 }
