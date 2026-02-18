@@ -11,11 +11,16 @@ const Courses = () => {
 
         try {
 
-            setIsLoading(true)
-            const response = await fetch("https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/courses");
+            setIsLoading(true);
+            const response = await fetch("https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/courses",{
+                        headers: new Headers({
+                            "ngrok-skip-browser-warning": "true",
+                            "Accept": "application/json" // Also ensure you ask for JSON explicitly
+                        }),
+            });
             const data = await response.json();
             
-            setIsLoading(false)
+            setIsLoading(false);
             setCourse(data);
             console.log(data);
             setIsLoading(false);
@@ -28,12 +33,6 @@ const Courses = () => {
     useEffect(()=>{
         getCourses();
     },[])
-
-    const loading = () => {
-
-        
-    }
-
 
     return(
         <div>

@@ -36,6 +36,10 @@ const DeEnroll = () => {
 
         const response = await fetch(`https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/enroll?studentId=${trimmedStuId}`,{
             method:"GET",
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "true",
+                "Accept": "application/json" // Also ensure you ask for JSON explicitly
+            }),
         });
 
         const data = await response.json();
@@ -58,6 +62,10 @@ const DeEnroll = () => {
             setMsg("loading.....");
             const response = await fetch(`https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/enroll?studentId=${trimmedStudentId}&courseId=${trimmedCourseId}`,{
                 method:'DELETE',
+                headers: new Headers({
+                    "ngrok-skip-browser-warning": "true",
+                    "Accept": "application/json" // Also ensure you ask for JSON explicitly
+                }),
             });
 
             console.log(response)

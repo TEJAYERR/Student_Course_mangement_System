@@ -33,6 +33,10 @@ const Enroll = () => {
 
             const response = await fetch(`https://ernestine-intertentacular-semidecadently.ngrok-free.dev/Student-Course-Registration-System/enroll?studentId=${trimmedStuId}&courseId=${trimmedCourseId}`,{
                 method :"POST",
+                headers: new Headers({
+                    "ngrok-skip-browser-warning": "true",
+                    "Accept": "application/json" // Also ensure you ask for JSON explicitly
+                }),
             });
 
             const data = await response.json();
