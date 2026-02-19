@@ -1,16 +1,19 @@
-# React + Vite
+# Student-Course-Management-System
+### Java backend and Mysql database with no framework used like spring or spring boot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is created for our class members Where there are a set of courses we can enroll in.
+A student can enroll all the courses but not a course which he already enrolled, It is more related to backend not frontend oriented.
 
-Currently, two official plugins are available:
+##Error Handling
+All of the errors are handled properly which increased the robustness, I believe that error handling is the 70% of work which makes our application work in some uncertainity.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Steps If you are outsider to verify the working
+###Outsider Roll-Number : Teja12 (use this in the roll no field)
 
-## React Compiler
+1. I have not deployed my backend anywhere I made my own devece as a server, So If it keeps saying Loading then you can just close the close application because I will turn them only when I need it (you can contat me from any of the socual media platforms If not working then I will respond to you).
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+2. Simply follow the application once open that's it
 
-## Expanding the ESLint configuration
+####Note:: "Teja123 is for the outsiders"
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Build Tool used is Maven
