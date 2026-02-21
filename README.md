@@ -8,12 +8,12 @@ A student can enroll all the courses but not a course which he already enrolled,
 All of the errors are handled properly which increased the robustness, I believe that error handling is the 70% of work which makes our application work in some uncertainity.
 
 ## Steps If you are outsider to verify the working
-### Outsider Roll-Number : Teja12 (use this in the roll no field)
+### Outsider Roll-Number : outsider12 (use this in the roll no field)
 
 1. I have not deployed my backend anywhere I made my own device as a server, So If it keeps saying Loading then you can just close the close application because I will turn them only when I need it (you can contat me from any of the social media platforms If not working then I will respond to you and if possible I will turn it on).
 
 2. Simply follow the application once open that's it
 
-#### Note:: "Teja123 is for the outsiders"
+#### Note:: "outsider12 is for the outsiders"
 
 Build Tool used is Maven
